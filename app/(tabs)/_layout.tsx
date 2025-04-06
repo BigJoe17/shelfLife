@@ -13,16 +13,17 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: isDarkMode ? '#fff' : '#000',
-        tabBarInactiveTintColor: isDarkMode ? '#666' : '#999',
+        tabBarActiveTintColor: isDarkMode ? '#EDF2F4' : '#2B2D42',
+        tabBarInactiveTintColor: isDarkMode ? '#8D99AE' : '#8D99AE',
         tabBarStyle: {
-          backgroundColor: isDarkMode ? '#000' : '#fff',
-          borderTopColor: isDarkMode ? '#333' : '#ddd',
+          backgroundColor: isDarkMode ? '#1a1a2e' : '#EDF2F4',
+          borderTopWidth: 0,
+          elevation: 0,
+          height: 60,
+          paddingBottom: 8,
+          paddingTop: 8,
         },
-        headerStyle: {
-          backgroundColor: isDarkMode ? '#000' : '#fff',
-        },
-        headerTintColor: isDarkMode ? '#fff' : '#000',
+        headerShown: false,
       }}
     >
       <Tabs.Screen

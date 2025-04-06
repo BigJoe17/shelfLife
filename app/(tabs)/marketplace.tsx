@@ -34,7 +34,62 @@ const mockFoodItems: FoodItem[] = [
     },
     status: 'available',
   },
-  // Add more mock items
+  {
+    id: '2',
+    title: 'Bakery Items',
+    description: 'Fresh bread, pastries, and cakes',
+    image: 'https://placehold.co/600x400',
+    expiryDate: new Date(Date.now() + 172800000),
+    location: 'Westside',
+    distance: 2.5,
+    donor: {
+      name: 'Sweet Treats Bakery',
+      rating: 4.9,
+    },
+    status: 'available',
+  },
+  {
+    id: '3',
+    title: 'Fruits Basket',
+    description: 'Seasonal fruits assortment',
+    image: 'https://placehold.co/600x400',
+    expiryDate: new Date(Date.now() + 259200000),
+    location: 'Eastside',
+    distance: 3.1,
+    donor: {
+      name: 'Fruit Paradise',
+      rating: 4.7,
+    },
+    status: 'claimed',
+  },
+  {
+    id: '4',
+    title: 'Dairy Products',
+    description: 'Milk, cheese, and yogurt',
+    image: 'https://placehold.co/600x400',
+    expiryDate: new Date(Date.now() + 432000000),
+    location: 'Northside',
+    distance: 4.2,
+    donor: {
+      name: 'Dairy Delight',
+      rating: 4.6,
+    },
+    status: 'available',
+  },
+  {
+    id: '5',
+    title: 'Meat Package',
+    description: 'Assorted fresh meats',
+    image: 'https://placehold.co/600x400',
+    expiryDate: new Date(Date.now() + 345600000),
+    location: 'Southside',
+    distance: 5.0,
+    donor: {
+      name: 'Meat Masters',
+      rating: 4.5,
+    },
+    status: 'available',
+  },
 ];
 
 export default function MarketplaceScreen() {
@@ -133,7 +188,7 @@ export default function MarketplaceScreen() {
       </View>
 
       <View className="px-4 py-2">
-        <View className="flex-row space-x-2">
+        <View className="flex-row gap-3">
           {['all', 'nearby', 'expiring'].map((filter) => (
             <TouchableOpacity
               key={filter}
@@ -168,7 +223,7 @@ export default function MarketplaceScreen() {
       />
 
       <TouchableOpacity
-        className={`absolute bottom-6 right-6 w-16 h-16 rounded-full items-center justify-center ${
+        className={`absolute bottom-6 right-6 w-16 h-16 gap-3 rounded-full items-center justify-center ${
           isDarkMode ? 'bg-blue-600' : 'bg-blue-500'
         } shadow-xl`}
         activeOpacity={0.8}
